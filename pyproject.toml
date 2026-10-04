@@ -1,0 +1,26 @@
+[project]
+name = "textbuckets"
+version = "0.1.0"
+description = "Learning project: semantic text classification, open-set recognition, and topic discovery."
+requires-python = ">=3.11"
+# Dependencies are added phase by phase, only when a phase actually needs them.
+# See README.md "Dependencies" for why each one is here.
+dependencies = [
+    "numpy>=1.26",        # vectors and linear algebra (every phase)
+    "scikit-learn>=1.4",  # TF-IDF, metrics, K-Means, DBSCAN, HDBSCAN (Phase 1+)
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
