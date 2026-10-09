@@ -8,6 +8,7 @@ requires-python = ">=3.11"
 dependencies = [
     "numpy>=1.26",        # vectors and linear algebra (every phase)
     "scikit-learn>=1.4",  # TF-IDF, metrics, K-Means, DBSCAN, HDBSCAN (Phase 1+)
+    "sentence-transformers>=3",  # pretrained embedding models; pulls in torch + transformers (Phase 2+)
 ]
 
 [project.optional-dependencies]

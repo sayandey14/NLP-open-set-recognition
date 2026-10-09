@@ -56,6 +56,7 @@ Each one is added only in the phase that needs it.
 |--------------|-----------------------------------------------------------------------|---------|
 | numpy        | vectors, dot products, norms                                          | Phase 0 |
 | scikit-learn | TF-IDF, metrics, K-Means/DBSCAN/HDBSCAN (HDBSCAN is built in since 1.3) | Phase 0 |
+| sentence-transformers | pretrained embedding models (MiniLM); brings PyTorch + transformers. We call the model through `transformers` and pool by hand; the library itself is used to check our numbers | Phase 2 |
 | pytest (dev) | tests                                                                 | Phase 0 |
 
-Planned: `sentence-transformers` (pulls in PyTorch) in Phase 2, `matplotlib` once we need plots.
+Planned: `matplotlib` once we need plots.
